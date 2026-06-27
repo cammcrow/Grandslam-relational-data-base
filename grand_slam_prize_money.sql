@@ -1,0 +1,162 @@
+-- Grand Slam Prize Money Database
+-- Winner's prize money in USD
+-- Sources: Wikipedia, Perfect Tennis, ESPN, Tennis365
+-- Note: Pre-2006 figures converted from local currency at approximate rates
+-- Equal pay dates: US Open 1973, Australian Open 2001, French Open 2006, Wimbledon 2007
+
+CREATE TABLE IF NOT EXISTS Grand_slam_prize_money (
+    year INTEGER,
+    grand_slam TEXT,
+    atp_prize_usd INTEGER,
+    wta_prize_usd INTEGER,
+    equal_pay TEXT
+);
+
+-- =====================
+-- WIMBLEDON
+-- =====================
+INSERT INTO Grand_slam_prize_money VALUES
+(2000, 'Wimbledon', 677040, 677040, 'No'),
+(2001, 'Wimbledon', 677040, 677040, 'No'),
+(2002, 'Wimbledon', 697960, 622820, 'No'),
+(2003, 'Wimbledon', 714400, 635550, 'No'),
+(2004, 'Wimbledon', 927000, 820000, 'No'),
+(2005, 'Wimbledon', 1053000, 931000, 'No'),
+(2006, 'Wimbledon', 1170000, 1022000, 'No'),
+(2007, 'Wimbledon', 1400000, 1400000, 'Yes'),
+(2008, 'Wimbledon', 1540000, 1540000, 'Yes'),
+(2009, 'Wimbledon', 1700000, 1700000, 'Yes'),
+(2010, 'Wimbledon', 1900000, 1900000, 'Yes'),
+(2011, 'Wimbledon', 2100000, 2100000, 'Yes'),
+(2012, 'Wimbledon', 2360000, 2360000, 'Yes'),
+(2013, 'Wimbledon', 2970000, 2970000, 'Yes'),
+(2014, 'Wimbledon', 3190000, 3190000, 'Yes'),
+(2015, 'Wimbledon', 3250000, 3250000, 'Yes'),
+(2016, 'Wimbledon', 3270000, 3270000, 'Yes'),
+(2017, 'Wimbledon', 3700000, 3700000, 'Yes'),
+(2018, 'Wimbledon', 3830000, 3830000, 'Yes'),
+(2019, 'Wimbledon', 4020000, 4020000, 'Yes'),
+(2020, 'Wimbledon', NULL, NULL, 'N/A'),
+(2021, 'Wimbledon', 2200000, 2200000, 'Yes'),
+(2022, 'Wimbledon', 2700000, 2700000, 'Yes'),
+(2023, 'Wimbledon', 3200000, 3200000, 'Yes'),
+(2024, 'Wimbledon', 3414150, 3414150, 'Yes');
+
+-- =====================
+-- US OPEN
+-- =====================
+INSERT INTO Grand_slam_prize_money VALUES
+(2000, 'US Open', 800000, 800000, 'Yes'),
+(2001, 'US Open', 850000, 850000, 'Yes'),
+(2002, 'US Open', 800000, 800000, 'Yes'),
+(2003, 'US Open', 850000, 850000, 'Yes'),
+(2004, 'US Open', 1000000, 1000000, 'Yes'),
+(2005, 'US Open', 1100000, 1100000, 'Yes'),
+(2006, 'US Open', 1200000, 1200000, 'Yes'),
+(2007, 'US Open', 1400000, 1400000, 'Yes'),
+(2008, 'US Open', 1500000, 1500000, 'Yes'),
+(2009, 'US Open', 1800000, 1800000, 'Yes'),
+(2010, 'US Open', 1800000, 1800000, 'Yes'),
+(2011, 'US Open', 1800000, 1800000, 'Yes'),
+(2012, 'US Open', 1900000, 1900000, 'Yes'),
+(2013, 'US Open', 2600000, 2600000, 'Yes'),
+(2014, 'US Open', 3000000, 3000000, 'Yes'),
+(2015, 'US Open', 3300000, 3300000, 'Yes'),
+(2016, 'US Open', 3500000, 3500000, 'Yes'),
+(2017, 'US Open', 3700000, 3700000, 'Yes'),
+(2018, 'US Open', 3800000, 3800000, 'Yes'),
+(2019, 'US Open', 3850000, 3850000, 'Yes'),
+(2020, 'US Open', 3000000, 3000000, 'Yes'),
+(2021, 'US Open', 2500000, 2500000, 'Yes'),
+(2022, 'US Open', 2600000, 2600000, 'Yes'),
+(2023, 'US Open', 3000000, 3000000, 'Yes'),
+(2024, 'US Open', 3600000, 3600000, 'Yes');
+
+-- =====================
+-- FRENCH OPEN (Roland Garros)
+-- Equal pay introduced in 2006
+-- =====================
+INSERT INTO Grand_slam_prize_money VALUES
+(2000, 'French Open', 900000, 855000, 'No'),
+(2001, 'French Open', 950000, 855000, 'No'),
+(2002, 'French Open', 913000, 823000, 'No'),
+(2003, 'French Open', 959000, 863000, 'No'),
+(2004, 'French Open', 1059000, 940000, 'No'),
+(2005, 'French Open', 1147000, 1022000, 'No'),
+(2006, 'French Open', 1180000, 1180000, 'Yes'),
+(2007, 'French Open', 1235000, 1235000, 'Yes'),
+(2008, 'French Open', 1500000, 1500000, 'Yes'),
+(2009, 'French Open', 1560000, 1560000, 'Yes'),
+(2010, 'French Open', 1650000, 1650000, 'Yes'),
+(2011, 'French Open', 1700000, 1700000, 'Yes'),
+(2012, 'French Open', 1900000, 1900000, 'Yes'),
+(2013, 'French Open', 2300000, 2300000, 'Yes'),
+(2014, 'French Open', 2600000, 2600000, 'Yes'),
+(2015, 'French Open', 2600000, 2600000, 'Yes'),
+(2016, 'French Open', 2800000, 2800000, 'Yes'),
+(2017, 'French Open', 2800000, 2800000, 'Yes'),
+(2018, 'French Open', 2800000, 2800000, 'Yes'),
+(2019, 'French Open', 2800000, 2800000, 'Yes'),
+(2020, 'French Open', 1800000, 1800000, 'Yes'),
+(2021, 'French Open', 2200000, 2200000, 'Yes'),
+(2022, 'French Open', 2200000, 2200000, 'Yes'),
+(2023, 'French Open', 2300000, 2300000, 'Yes'),
+(2024, 'French Open', 2608560, 2608560, 'Yes');
+
+-- =====================
+-- AUSTRALIAN OPEN
+-- Equal pay reinstated in 2001
+-- =====================
+INSERT INTO Grand_slam_prize_money VALUES
+(2000, 'Australian Open', 441000, 441000, 'Yes'),
+(2001, 'Australian Open', 465000, 465000, 'Yes'),
+(2002, 'Australian Open', 520000, 520000, 'Yes'),
+(2003, 'Australian Open', 575000, 575000, 'Yes'),
+(2004, 'Australian Open', 780000, 780000, 'Yes'),
+(2005, 'Australian Open', 780000, 780000, 'Yes'),
+(2006, 'Australian Open', 870000, 870000, 'Yes'),
+(2007, 'Australian Open', 870000, 870000, 'Yes'),
+(2008, 'Australian Open', 1100000, 1100000, 'Yes'),
+(2009, 'Australian Open', 1500000, 1500000, 'Yes'),
+(2010, 'Australian Open', 1700000, 1700000, 'Yes'),
+(2011, 'Australian Open', 1700000, 1700000, 'Yes'),
+(2012, 'Australian Open', 1900000, 1900000, 'Yes'),
+(2013, 'Australian Open', 2100000, 2100000, 'Yes'),
+(2014, 'Australian Open', 2600000, 2600000, 'Yes'),
+(2015, 'Australian Open', 2750000, 2750000, 'Yes'),
+(2016, 'Australian Open', 2900000, 2900000, 'Yes'),
+(2017, 'Australian Open', 3200000, 3200000, 'Yes'),
+(2018, 'Australian Open', 3200000, 3200000, 'Yes'),
+(2019, 'Australian Open', 3200000, 3200000, 'Yes'),
+(2020, 'Australian Open', 2870000, 2870000, 'Yes'),
+(2021, 'Australian Open', 2100000, 2100000, 'Yes'),
+(2022, 'Australian Open', 2100000, 2100000, 'Yes'),
+(2023, 'Australian Open', 2200000, 2200000, 'Yes'),
+(2024, 'Australian Open', 2105775, 2105775, 'Yes');
+
+-- =====================
+-- USEFUL QUERIES TO RUN
+-- =====================
+
+-- View all data
+-- SELECT * FROM Grand_slam_prize_money ORDER BY year, grand_slam;
+
+-- Years where pay was NOT equal
+-- SELECT year, grand_slam, atp_prize_usd, wta_prize_usd,
+--        atp_prize_usd - wta_prize_usd AS pay_gap
+-- FROM Grand_slam_prize_money
+-- WHERE equal_pay = 'No'
+-- ORDER BY year, grand_slam;
+
+-- Average winner prize by tournament
+-- SELECT grand_slam, ROUND(AVG(atp_prize_usd), 0) AS avg_prize
+-- FROM Grand_slam_prize_money
+-- WHERE atp_prize_usd IS NOT NULL
+-- GROUP BY grand_slam
+-- ORDER BY avg_prize DESC;
+
+-- Prize money growth over time at Wimbledon
+-- SELECT year, atp_prize_usd
+-- FROM Grand_slam_prize_money
+-- WHERE grand_slam = 'Wimbledon'
+-- ORDER BY year;
