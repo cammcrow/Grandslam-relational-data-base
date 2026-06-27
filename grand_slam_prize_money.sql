@@ -1,9 +1,3 @@
--- Grand Slam Prize Money Database
--- Winner's prize money in USD
--- Sources: Wikipedia, Perfect Tennis, ESPN, Tennis365
--- Note: Pre-2006 figures converted from local currency at approximate rates
--- Equal pay dates: US Open 1973, Australian Open 2001, French Open 2006, Wimbledon 2007
-
 CREATE TABLE IF NOT EXISTS Grand_slam_prize_money (
     year INTEGER,
     grand_slam TEXT,
@@ -12,9 +6,6 @@ CREATE TABLE IF NOT EXISTS Grand_slam_prize_money (
     equal_pay TEXT
 );
 
--- =====================
--- WIMBLEDON
--- =====================
 INSERT INTO Grand_slam_prize_money VALUES
 (2000, 'Wimbledon', 677040, 677040, 'No'),
 (2001, 'Wimbledon', 677040, 677040, 'No'),
@@ -42,9 +33,6 @@ INSERT INTO Grand_slam_prize_money VALUES
 (2023, 'Wimbledon', 3200000, 3200000, 'Yes'),
 (2024, 'Wimbledon', 3414150, 3414150, 'Yes');
 
--- =====================
--- US OPEN
--- =====================
 INSERT INTO Grand_slam_prize_money VALUES
 (2000, 'US Open', 800000, 800000, 'Yes'),
 (2001, 'US Open', 850000, 850000, 'Yes'),
@@ -72,10 +60,6 @@ INSERT INTO Grand_slam_prize_money VALUES
 (2023, 'US Open', 3000000, 3000000, 'Yes'),
 (2024, 'US Open', 3600000, 3600000, 'Yes');
 
--- =====================
--- FRENCH OPEN (Roland Garros)
--- Equal pay introduced in 2006
--- =====================
 INSERT INTO Grand_slam_prize_money VALUES
 (2000, 'French Open', 900000, 855000, 'No'),
 (2001, 'French Open', 950000, 855000, 'No'),
@@ -103,10 +87,6 @@ INSERT INTO Grand_slam_prize_money VALUES
 (2023, 'French Open', 2300000, 2300000, 'Yes'),
 (2024, 'French Open', 2608560, 2608560, 'Yes');
 
--- =====================
--- AUSTRALIAN OPEN
--- Equal pay reinstated in 2001
--- =====================
 INSERT INTO Grand_slam_prize_money VALUES
 (2000, 'Australian Open', 441000, 441000, 'Yes'),
 (2001, 'Australian Open', 465000, 465000, 'Yes'),
@@ -133,30 +113,3 @@ INSERT INTO Grand_slam_prize_money VALUES
 (2022, 'Australian Open', 2100000, 2100000, 'Yes'),
 (2023, 'Australian Open', 2200000, 2200000, 'Yes'),
 (2024, 'Australian Open', 2105775, 2105775, 'Yes');
-
--- =====================
--- USEFUL QUERIES TO RUN
--- =====================
-
--- View all data
--- SELECT * FROM Grand_slam_prize_money ORDER BY year, grand_slam;
-
--- Years where pay was NOT equal
--- SELECT year, grand_slam, atp_prize_usd, wta_prize_usd,
---        atp_prize_usd - wta_prize_usd AS pay_gap
--- FROM Grand_slam_prize_money
--- WHERE equal_pay = 'No'
--- ORDER BY year, grand_slam;
-
--- Average winner prize by tournament
--- SELECT grand_slam, ROUND(AVG(atp_prize_usd), 0) AS avg_prize
--- FROM Grand_slam_prize_money
--- WHERE atp_prize_usd IS NOT NULL
--- GROUP BY grand_slam
--- ORDER BY avg_prize DESC;
-
--- Prize money growth over time at Wimbledon
--- SELECT year, atp_prize_usd
--- FROM Grand_slam_prize_money
--- WHERE grand_slam = 'Wimbledon'
--- ORDER BY year;
